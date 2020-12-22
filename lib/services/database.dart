@@ -8,6 +8,7 @@ abstract class Database {
     @required String path,
     @required File file,
   });
+
   Future<void> setData({
     @required String path,
     @required Map<String, dynamic> data,
