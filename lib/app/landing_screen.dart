@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/app/sign_in/sign_in_screen.dart';
 import 'package:hello_world/services/auth.dart';
 import 'package:hello_world/services/firebase_auth_service.dart';
 
@@ -16,9 +17,7 @@ class LandingScreen extends StatelessWidget {
           // verifi la donnée la null wala la
           if (user == null) {
             // user marahch me enregistrer
-            return Container(
-              color: Colors.red,
-            );
+            return SignInScreen();
           } else {
             // rah deja me inscrit
             return Container(
