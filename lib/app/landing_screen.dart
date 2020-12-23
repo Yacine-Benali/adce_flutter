@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/app/profile/profile_screen.dart';
+import 'package:hello_world/app/base_screen.dart';
 import 'package:hello_world/app/sign_in/sign_in_screen.dart';
 import 'package:hello_world/services/auth.dart';
 import 'package:hello_world/services/firebase_auth_service.dart';
@@ -20,8 +20,8 @@ class LandingScreen extends StatelessWidget {
             // user marahch me enregistrer
             return SignInScreen();
           } else {
-            // rah deja me inscrit
-            return ProfileScreen();
+            // rah authenticated
+            return BaseScreen(uid: user.uid);
           }
         } else {
           // stream mazal ma ye9ele3
