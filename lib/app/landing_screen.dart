@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/app/profile/profile_screen.dart';
 import 'package:hello_world/app/sign_in/sign_in_screen.dart';
 import 'package:hello_world/services/auth.dart';
 import 'package:hello_world/services/firebase_auth_service.dart';
@@ -20,9 +21,7 @@ class LandingScreen extends StatelessWidget {
             return SignInScreen();
           } else {
             // rah deja me inscrit
-            return Container(
-              color: Colors.blue,
-            );
+            return ProfileScreen();
           }
         } else {
           // stream mazal ma ye9ele3
