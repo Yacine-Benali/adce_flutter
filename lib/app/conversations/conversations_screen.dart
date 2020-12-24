@@ -5,9 +5,9 @@ import 'package:hello_world/services/firebase_auth_service.dart';
 import 'package:hello_world/services/firestore_service.dart';
 
 class ConversationsScreeen extends StatefulWidget {
-  const ConversationsScreeen({Key key, this.uid}) : super(key: key);
-
   final String uid;
+
+  const ConversationsScreeen({Key key, this.uid}) : super(key: key);
 
   @override
   _ConversationsScreeenState createState() => _ConversationsScreeenState();
@@ -39,7 +39,9 @@ class _ConversationsScreeenState extends State<ConversationsScreeen> {
                         context,
                         MaterialPageRoute(
                           builder: (context) {
-                            return ChatScreen();
+                            return ChatScreen(
+                              user: user,
+                            );
                           },
                         ),
                       );
