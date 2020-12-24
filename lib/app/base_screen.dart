@@ -28,7 +28,9 @@ class _BaseScreenState extends State<BaseScreen> {
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             // document rah deja kayan
-            return ConversationsScreeen();
+            return ConversationsScreeen(
+              uid: widget.uid,
+            );
           } else {
             // makanch document
             return ProfileScreen(
